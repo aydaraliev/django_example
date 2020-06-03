@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order List</title>
+</head>
+<body>
+<ul>
+    {% for order in object_list %}
+    <li> {{ order }} </li>
+    {% empty %}
+    <li> No orders yet </li>
+    {% endfor %}
+</ul>
+<p>
+    Using https?
+    {{ request.is_secure|yesno }}
+</p>
+</body>
+</html>
